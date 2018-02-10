@@ -11,11 +11,7 @@
   <%= f.text_field :name, placeholder: "Document name" %>
 
   <%= f.fields_for :sections do |s| %>
-    <p>
-    <%= s.text_field :name, placeholder: "Section name" %>
-    <%= s.check_box :_destroy %>
-    <%= s.label :_destroy %>
-    </p>
+    <%= render partial: "form_sections", locals: { s: s }%>
   <% end %>
 
   <%= f.submit %>
