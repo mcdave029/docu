@@ -1,0 +1,12 @@
+<!--
+  As you can see here we called the @document where in we declared
+  as new object in new action in documents_controller
+  form_for will detect this as a create because the object is not
+  yet existed and in initialization process
+  you customize the path for this for some action you can specify
+  url, controller and actions or the path just search on how to do
+  it google wil give you hint on this for now this is a basic implementation
+-->
+<%= form_for @document do |f| %>
+  <%= f.submit %>
+<% end %>
